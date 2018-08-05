@@ -3,26 +3,6 @@ body {
   background-image: url(/img/flow-pat-010.jpg);
 }
 
-.message {
-  width: auto;
-  min-height: 7vh;
-  padding: 5px 10px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 2.5vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Bad Script', cursive;
-  box-shadow: 0 0 1.5vh 1vh #fff, 0 0 2.5vh 2vh #fff;
-  text-align: center;
-  font-size: 1.5em;
-  opacity: 1;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .btn {
   margin: 0;
   box-sizing: border-box;
@@ -46,6 +26,7 @@ body {
   transform: translate(-50%, -50%);
   opacity: 1;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .btn:hover {
@@ -53,9 +34,29 @@ body {
   background-color: #F0E4FD;
 }
 
+.message {
+  width: auto;
+  min-height: 7vh;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 2.5vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Bad Script', cursive;
+  box-shadow: 0 0 1.5vh 1vh #fff, 0 0 2.5vh 2vh #fff;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 1;
+  box-sizing: border-box;
+  margin: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
 .hidden {
-  height: 0;
-  width: 0;
   opacity: 0;
   transition: 0.5s;
 }

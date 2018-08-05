@@ -93,14 +93,13 @@ const arr = [
 ];
 console.log(arr.length);
 function msg(e) {
-  e.currentTarget.classList.add('hidden');
-  out.classList.remove('hidden');
+  e.currentTarget.classList.toggle('hidden');
+  out.classList.toggle('hidden');
   const count = Math.round(Math.random() * arr.length);
   out.textContent = arr[count];
   setTimeout(() => {
-    out.textContent = '';
-    btn.classList.remove('hidden');
-    out.classList.add('hidden');
-  }, 5000);
+    btn.classList.toggle('hidden');
+    out.classList.toggle('hidden');
+  }, 7000);
 }
 btn.addEventListener('click', msg);
