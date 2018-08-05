@@ -1,6 +1,7 @@
 body {
   background-color: #594F8D;
-  background-image: url(/img/flow-pat-010.jpg);
+  background-image: url(/img/715_3018-oboi-siren-fioletovaya.jpg);
+  background-size: cover; 
 }
 
 .btn {
@@ -13,7 +14,7 @@ body {
   width: 15vw;
   height: 7vh;
   background-color: #594F8D;
-  border: 2px solid #AFA5DB;
+  border: 1px solid #AFA5DB;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -31,6 +32,7 @@ body {
 }
 
 .btn:hover {
+  width: 12vw;
   border: 1px solid #AFA5DB;
   border-radius: 3vw;
   transition: 0.5s;
@@ -60,9 +62,13 @@ body {
   margin: 0;
   transition: 0.5s;
   overflow: hidden;
+  color: rgb(123, 79, 141);
 }
 
 .hidden {
+  font-size: 0;
+  height: 0;
+  width: 0;
   opacity: 0;
   transition: 0.5s;
 }

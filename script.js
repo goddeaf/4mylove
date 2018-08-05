@@ -1,5 +1,6 @@
 const out = document.querySelector('.message');
 const btn = document.querySelector('.btn');
+let time = 0;
 const arr = [
   'Ты у меня лучшая на свете',
   'Ты отличный друг.',
@@ -91,15 +92,21 @@ const arr = [
   'Ты – кладезь полезной информации!',
   'Ты очень позитивный человек!',
 ];
-console.log(arr.length);
+
 function msg(e) {
   e.currentTarget.classList.toggle('hidden');
   out.classList.toggle('hidden');
   const count = Math.round(Math.random() * arr.length);
   out.textContent = arr[count];
-  setTimeout(() => {
+  time = setTimeout(() => {
     btn.classList.toggle('hidden');
     out.classList.toggle('hidden');
   }, 7000);
 }
 btn.addEventListener('click', msg);
+out.addEventListener('click', (event) => {
+  console.log(time);
+  out.classList.toggle('hidden');
+  btn.classList.toggle('hidden');
+  clearTimeout(time);
+});
