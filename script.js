@@ -94,19 +94,37 @@ const arr = [
 ];
 
 function msg(e) {
-  e.currentTarget.classList.toggle('hidden');
-  out.classList.toggle('hidden');
+  e.currentTarget.classList.add('hidden');
+  out.classList.remove('hidden');
   const count = Math.round(Math.random() * arr.length);
   out.textContent = arr[count];
   time = setTimeout(() => {
-    btn.classList.toggle('hidden');
-    out.classList.toggle('hidden');
+    btn.classList.remove('hidden');
+    out.classList.add('hidden');
   }, 7000);
 }
 btn.addEventListener('click', msg);
 out.addEventListener('click', (event) => {
-  console.log(time);
-  out.classList.toggle('hidden');
-  btn.classList.toggle('hidden');
+  out.classList.add('hidden');
+  btn.classList.remove('hidden');
   clearTimeout(time);
 });
+
+function bgImg(delay) {
+  const kiss = document.createElement('img');
+  kiss.setAttribute('src', '/img/eaec.png');
+  document.body.appendChild(kiss);
+  kiss.classList.add('kiss');
+  kiss.style.animationDelay = `${delay}s`;
+  kiss.style.top = `${Math.round(Math.random() * 100)}vh`;
+  kiss.style.left = `${Math.round(Math.random() * 100)}vw`;
+  const time = 2000 + delay;
+  return setTimeout(() => {
+    kiss.remove();
+    bgImg(delay);
+  }, time);
+}
+bgImg(0);
+bgImg(0.3);
+bgImg(0.6);
+bgImg(0.9);

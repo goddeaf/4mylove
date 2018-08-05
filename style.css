@@ -21,10 +21,10 @@ body {
   box-shadow: 0 0 1.5vh 1vh #F0E4FD;
   color: #fff;
   font-family: 'Pacifico', cursive;
-  font-size: 1.5vh;
+  font-size: 2vh;
   text-shadow: 0 0 1vh #F0E4FD, 0 0 1vh #F0E4FD, 0 0 5px #000;
   transform: translate(-50%, -50%);
-  opacity: 1;
+  opacity: 0.8;
   transition: 0.5s;
   z-index: 2;
   transform-origin: center;
@@ -32,13 +32,13 @@ body {
 }
 
 .btn:hover {
+  opacity: 0.9;
   width: 12vw;
   border: 1px solid #AFA5DB;
   border-radius: 3vw;
   transition: 0.5s;
   color: #594F8D;
   background-color: #F0E4FD;
-  font-size: 1.7vh;  
 }
 
 .message {
@@ -71,4 +71,27 @@ body {
   width: 0;
   opacity: 0;
   transition: 0.5s;
+}
+
+.kiss {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: auto;
+  width: 3vw;
+  opacity: 0;
+  transition: 1s;
+  animation-delay: 0;
+  animation: grow 2s;
+}
+
+@keyframes grow {
+  0% { 
+    opacity: 1;
+    transform: scale(0.8)
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5)
+  }
 }
