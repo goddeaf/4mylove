@@ -20,21 +20,27 @@ body {
   box-shadow: 0 0 1.5vh 1vh #F0E4FD;
   color: #fff;
   font-family: 'Pacifico', cursive;
-  text-transform: uppercase;
   font-size: 1.5vh;
   text-shadow: 0 0 1vh #F0E4FD, 0 0 1vh #F0E4FD, 0 0 5px #000;
   transform: translate(-50%, -50%);
   opacity: 1;
   transition: 0.5s;
   z-index: 2;
+  transform-origin: center;
+  text-transform: uppercase;
 }
 
 .btn:hover {
+  border: 1px solid #AFA5DB;
+  border-radius: 3vw;
+  transition: 0.5s;
   color: #594F8D;
   background-color: #F0E4FD;
+  font-size: 1.7vh;  
 }
 
 .message {
+  transform-origin: center;
   width: auto;
   min-height: 7vh;
   padding: 5px 10px;
