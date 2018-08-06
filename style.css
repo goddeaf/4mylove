@@ -1,12 +1,21 @@
 body {
   background-color: #594F8D;
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  min-width: 100vw;
+  min-height: 100vh;
   background-image: url(/img/715_3018-oboi-siren-fioletovaya.jpg);
+  background-position: center center;
   background-size: cover; 
   background-repeat: no-repeat;
 }
 
 .btn {
   margin: 0;
+  padding: 5px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -26,8 +35,7 @@ body {
   text-shadow: 0 0 1vh #F0E4FD, 0 0 1vh #F0E4FD, 0 0 5px #000;
   transform: translate(-50%, -50%);
   opacity: 0.8;
-  transition: 0.5s;
-  z-index: 2;
+  transition: 0.3s;
   transform-origin: center;
   text-transform: uppercase;
 }
@@ -61,17 +69,22 @@ body {
   opacity: 1;
   box-sizing: border-box;
   margin: 0;
-  transition: 0.5s;
+  transition: 0.3s;
   overflow: hidden;
   color: rgb(123, 79, 141);
 }
 
 .hidden {
+  z-index: -1;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  padding: 0;
   font-size: 0;
   height: 0;
   width: 0;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .kiss {
