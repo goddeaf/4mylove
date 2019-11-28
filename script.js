@@ -114,7 +114,7 @@ out.addEventListener('click', (event) => {
 function bgImg(delay) {
   const imgNum = Math.round(Math.random() * 4);
   const kiss = document.createElement('img');
-  kiss.setAttribute('src', `/img/${imgNum}.png`);
+  kiss.setAttribute('src', `img/${imgNum}.png`);
   document.body.appendChild(kiss);
   kiss.classList.add('kiss');
   kiss.style.animationDelay = `${delay}s`;

@@ -7,7 +7,7 @@ body {
 .bg {
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(/img/715_3018-oboi-siren-fioletovaya.jpg);
+  background-image: url('img/715_3018-oboi-siren-fioletovaya.jpg');
   background-position: center center;
   background-size: cover; 
   background-repeat: no-repeat;
